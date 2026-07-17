@@ -21,7 +21,9 @@ const portfolioData = {
         " AI for Business Professionals ",
         "Branding and Design Simulation",
         "HTML (freecodecamp)"
-    ]
+    ],
+    projects:[crypto app }
+              
 };
 
 // ==========================================================================
