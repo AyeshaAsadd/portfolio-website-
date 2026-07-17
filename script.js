@@ -129,7 +129,7 @@ function Footer(data) {
 // CORE DOM RENDERER
 // ==========================================================================
 function App() {
-    const root = document.getElementById('app');
+    const app= document.getElementById('app');
     root.innerHTML = `
         ${Navbar(portfolioData)}
         ${Hero(portfolioData)}
