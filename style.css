@@ -1,0 +1,262 @@
+/* ==========================================================================
+   DESIGN SYSTEM & NEON TOKENS
+   ========================================================================== */
+:root {
+    /* Color System (Cyber Black & Neon Red) */
+    --bg-main: #050505;
+    --bg-card: #0d0d0d;
+    --brand-accent: #ff003c; /* Pure Neon Red */
+    --brand-glow: rgba(255, 0, 60, 0.55);
+    --text-primary: #ffffff;
+    --text-muted: #a0a0a0;
+    --border-subtle: #221114;
+
+    /* Typography */
+    --ff-sans: 'Plus Jakarta Sans', sans-serif;
+    --ff-mono: 'JetBrains Mono', monospace;
+
+    /* Spacing Scales */
+    --pad-xs: 0.5rem;
+    --pad-sm: 1rem;
+    --pad-md: 2rem;
+    --pad-lg: 4rem;
+    --max-content: 1100px;
+}
+
+/* ==========================================================================
+   RESET & BASE UTILITIES
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-sans);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-content);
+    margin: 0 auto;
+    padding: 0 var(--pad-md);
+}
+
+/* Neon Badges for Skills & Tags */
+.badge {
+    font-family: var(--ff-mono);
+    font-size: 0.75rem;
+    background: rgba(255, 0, 60, 0.05);
+    color: var(--brand-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 0, 60, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Neon Glow Action Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: var(--brand-accent);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 0 15px var(--brand-glow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px var(--brand-accent);
+}
+
+/* ==========================================================================
+   COMPONENT STYLES (Mobile-First Layout)
+   ========================================================================== */
+
+/* Header & Navigation */
+.header-nav {
+    border-bottom: 1px solid var(--border-subtle);
+    padding: var(--pad-sm) 0;
+    position: sticky;
+    top: 0;
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    font-family: var(--ff-mono);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--brand-accent);
+    text-shadow: 0 0 8px var(--brand-glow);
+}
+.nav-links {
+    display: none; /* Mobile پر لنکس چھپ جائیں گے */
+    gap: var(--pad-md);
+    list-style: none;
+}
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-family: var(--ff-mono);
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--brand-accent);
+    text-shadow: 0 0 5px var(--brand-glow);
+}
+
+/* Hero Branding Section */
+.hero-section {
+    padding: var(--pad-lg) 0;
+    text-align: left;
+}
+.hero-section .mono-tag {
+    font-family: var(--ff-mono);
+    color: var(--brand-accent);
+    margin-bottom: var(--pad-xs);
+    display: block;
+    text-shadow: 0 0 5px var(--brand-glow);
+    font-weight: 700;
+}
+.hero-section h1 {
+    font-size: 2.25rem; /* Mobile Size Default */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--pad-sm);
+    text-transform: uppercase;
+}
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 650px;
+    margin-bottom: var(--pad-md);
+}
+
+/* General Sections Typography */
+.projects-section {
+    padding: var(--pad-lg) 0;
+}
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--pad-md);
+    display: flex;
+    align-items: center;
+    gap: var(--pad-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-title::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background: var(--border-subtle);
+}
+
+/* Dynamic Projects Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile پر سنگل کالم */
+    gap: var(--pad-md);
+}
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: var(--pad-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.project-card:hover {
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.15);
+    transform: translateY(-4px);
+}
+.project-meta h3 {
+    margin: var(--pad-xs) 0;
+    font-size: 1.25rem;
+}
+.project-meta p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--pad-sm);
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--pad-sm);
+}
+.project-link {
+    font-family: var(--ff-mono);
+    color: var(--brand-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* System Footer */
+.footer-section {
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--pad-md) 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: var(--ff-mono);
+}
+
+/* ==========================================================================
+   LAPTOP / DESKTOP RESPONSIVE BREAKPOINTS (بڑی اسکرینز کے لیے سائزز کی خودکار تبدیلی)
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops View */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* بڑی اسکرینز پر مینو لنکس نظر آئیں گے */
+    }
+    .hero-section {
+        padding: 6rem 0;
+    }
+    .hero-section h1 {
+        font-size: 3.5rem; /* Laptop text-scale size */
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* ٹیبلٹ اسکرینز پر 2 کالمز */
+    }
+}
+
+/* Standard Laptop & High-Res Monitors View */
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* فل لیپ ٹاپ ویو پر 3 کالمز کا گرڈ */
+    }
+}
