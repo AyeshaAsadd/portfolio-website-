@@ -130,7 +130,8 @@ function Footer(data) {
 // ==========================================================================
 function App() {
     const app= document.getElementById('app');
-    root.innerHTML = `
+    if(app){
+        app.innerHTML = `
         ${Navbar(portfolioData)}
         ${Hero(portfolioData)}
         ${SkillsSection(portfolioData)}
