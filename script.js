@@ -3,43 +3,24 @@
 // ==========================================================================
 const portfolioData = {
     engineerName: "Ayesha Asad",
-    role: "Web Developer & Frontend Intern",
-    bio: "An ICS graduate with a deep passion for engineering modern web experiences. Currently working as an intern at Neuro Five Solutions, blending core web development skills with insights into AI applications for businesses.",
+    role: " Full Stack Web Developer Intern",
+    bio: "My Education is Intermediate with ICS.  Currently working as an intern at Neuro Five Solutions .",
     contactEmail: "ayeshaxasadd@gmail.com",
     navigation: [
         { name: "// skills", target: "#skills" },
-        { name: "// projects", target: "#projects" },
         { name: "// certifications", target: "#certifications" }
     ],
     skills: [
-        "HTML5 / CSS3", "JavaScript (ES6+)", "Web Designing", 
+        "HTML"," CSS", "JavaScript ", "Web Designing", 
         "C Language", "Database Basics", "WordPress", 
-        "AI for Business", "Branding & Design Simulation"
-    ],
-    projects: [
-        {
-            title: "Neuro Five Intern Deployments",
-            description: "Building, refining, and deploying responsive user interfaces and frontend modules during my active industry internship.",
-            tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-            link: "https://github.com"
-        },
-        {
-            title: "C & Database Integration Lab",
-            description: "A foundational laboratory system designed to demonstrate programmatic structure logic alongside basic database querying.",
-            tags: ["C Language", "SQL Basics", "Logic Architecture"],
-            link: "https://github.com"
-        },
-        {
-            title: "Custom Neon UI Portfolio",
-            description: "A highly responsive, lightning-fast component-based portfolio styled with a sleek high-contrast cyber theme.",
-            tags: ["CSS Variables", "DOM Manipulation", "Clean Code"],
-            link: "https://github.com"
-        }
+        "AI ", "Branding & Design Simulation"
     ],
     certifications: [
-        "Build a Free Website with WordPress",
-        "AI for Beginners & Business Professionals",
+        "Build a Free Website with WordPress ",
+        "AI for Beginners",
+        " AI for Business Professionals ",
         "Branding and Design Simulation"
+        "HTML (freecodecamp)"
     ]
 };
 
