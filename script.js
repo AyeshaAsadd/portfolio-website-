@@ -22,7 +22,7 @@ const portfolioData = {
         "Branding and Design Simulation",
         "HTML (freecodecamp)"
     ],
-    projects:[crypto app ]
+    projects:[ ]
               
 };
 
