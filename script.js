@@ -19,7 +19,7 @@ const portfolioData = {
         "Build a Free Website with WordPress ",
         "AI for Beginners",
         " AI for Business Professionals ",
-        "Branding and Design Simulation"
+        "Branding and Design Simulation",
         "HTML (freecodecamp)"
     ]
 };
