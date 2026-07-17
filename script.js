@@ -13,7 +13,7 @@ const portfolioData = {
     skills: [
         "HTML"," CSS", "JavaScript ", "Web Designing", 
         "C Language", "Database Basics", "WordPress", 
-        "AI ", "Branding & Design Simulation"
+        "AI ", "Branding & Design Simulation",
     ],
     certifications: [
         "Build a Free Website with WordPress ",
