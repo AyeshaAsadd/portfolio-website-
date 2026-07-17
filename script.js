@@ -140,5 +140,5 @@ function App() {
         ${Footer(portfolioData)}
     `;
 }
-
+}
 document.addEventListener('DOMContentLoaded', App);
